@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bookdetail_backgroud"
+    android:orientation="vertical"   >
+
+    <include layout="@layout/fragment_book_layout_title"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/bookname"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/book"
+            android:text="图片" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="作者" />
+
+            <TextView
+                android:id="@+id/publisher"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="出版社" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="价格" />
+            <TextView
+                android:id="@+id/sales"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="累计销量" />
+            <TextView
+                android:id="@+id/store"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:text="库存状态" />
+            <Button
+                android:id="@+id/add_book"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="添加到购物车"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/information"
+            android:layout_width="match_parent"
+            android:layout_height="121dp"
+            android:text="书籍信息" />
+
+    </LinearLayout>
+
+    <!--书籍评论区-->
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        //评分
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@android:style/Widget.DeviceDefault.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:rating="4.5"
+            android:layout_height="wrap_content"
+            android:numStars="5" />
+
+        <TextView
+            android:id="@+id/commont1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="用户*星：值得一看"/>
+        <TextView
+            android:id="@+id/commont2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="用户*仁：剧情紧凑，引人入胜"/>
+        <TextView
+            android:id="@+id/commont3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="用户*138：耐人寻味"/>
+        <TextView
+            android:id="@+id/commont4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="更多评论...."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="left"
+                android:gravity="left|center_vertical"
+                android:hint="输入内容" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left|center_vertical"
+                android:text="评论" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
